@@ -19,9 +19,9 @@
   /* (Main Background) */
   --very-pale-blue: hsl(230, 100%, 99%);
   /* (Empty Slider Bar) */
-  --light-grayish-blue: hsl(224, 65%, 95%);
+  --light-grayish-blue-1: hsl(224, 65%, 95%);
   /* (Toggle Background) */
-  --light-grayish-blue: hsl(223, 50%, 87%);
+  --light-grayish-blue-2: hsl(223, 50%, 87%);
   /* (Text) */
   --grayish-blue: hsl(225, 20%, 60%);
   /* (Text & CTA Background) */
@@ -67,6 +67,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
+}
+
+.header-title {
+  color: var(--dark-desaturated-blue);
+}
+
+.header-subtitle {
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .card {
@@ -78,6 +88,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  position: relative;
 }
 
 .card-top {
@@ -111,18 +122,6 @@ body {
 .card-slider-container {
   position: relative;
   width: 100%;
-}
-
-.pseudo-thumb {
-  position: absolute;
-  width: 21px;
-  height: 21px;
-  background-color: pink;
-  opacity: 1;
-  margin-top: -21px;
-  margin-left: -10px;
-  z-index: -1;
-  cursor: pointer;
 }
 
 .card-slider {
@@ -223,7 +222,7 @@ input[type=range]::-webkit-slider-thumb {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--light-grayish-blue);
+  background-color: var(--light-grayish-blue-2);
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -256,8 +255,11 @@ input:checked + .toggle-slider:before {
   transform: translateX(20px);
 }
 
-.card-diviver {
-  width: 100%;
+.card-divider {
+  background-color: var(--light-grayish-blue-1);
+  height: 2px;  
+  width: 540px;
+  margin-left: -40px;
 }
 
 .card-footer {

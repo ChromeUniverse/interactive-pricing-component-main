@@ -61,11 +61,6 @@ function App() {
               transition: 'all 0.5s ease-in-out'
             }}
           />
-          {/* <div
-            className="pseudo-thumb"
-            style={{ left: `${slider * 25 + (2 - slider) * (2.35)}%` }}
-            tabIndex={-1}
-          ></div> */}
         </div>
 
         <div className="card-toggle">
@@ -85,7 +80,7 @@ function App() {
           </p>
         </div>
 
-        <hr className="card-divider" />
+        <div className="card-divider" />
 
         <div className="card-footer">
           <ul className="card-footer-list">
