@@ -103,3 +103,9 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+
+Important links:
+- [SO](https://stackoverflow.com/questions/18389224/how-to-style-html5-range-input-to-have-different-color-before-and-after-slider)
+- [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider)
+- [W3Schools](https://www.w3schools.com/howto/howto_js_rangeslider.asp)
