@@ -100,6 +100,7 @@ body {
 
 .card-top-pageviews {
   text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .card-top-pricing {
@@ -202,8 +203,8 @@ input[type=range]::-webkit-slider-thumb {
 .switch {
   position: relative;
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 50px;
+  height: 26px;
   border-radius: 10px;
 }
 
@@ -228,11 +229,11 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 34px;
 }
 
-.toggle-slider:before {
+.toggle-slider::before {
   position: absolute;
   content: "";
-  height: 12px;
-  width: 12px;
+  height: 18px;
+  width: 18px;
   left: 4px;
   bottom: 4px;
   background-color: white;
@@ -249,10 +250,10 @@ input:focus + .toggle-slider {
   box-shadow: 0 0 1px #2196F3;
 }
 
-input:checked + .toggle-slider:before {
+input:checked + .toggle-slider::before {
   /* -webkit-transform: translateX(26px); */
   /* -ms-transform: translateX(26px); */
-  transform: translateX(20px);
+  transform: translateX(24px);
 }
 
 .card-divider {
