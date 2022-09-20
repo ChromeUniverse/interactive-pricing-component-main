@@ -63,6 +63,13 @@ function App() {
           />
         </div>
 
+        <p className="card-top-pricing-mobile">
+          <span className="card-top-pricing-price">
+            ${discount ? prices[slider] * 0.75 : prices[slider]}.00
+          </span>
+          / month
+        </p>
+
         <div className="card-toggle">
           <p className="card-toggle-monthly">Monthly Billing</p>
           <label className="switch">
@@ -77,6 +84,7 @@ function App() {
           <p className="card-toggle-yearly">
             Yearly Billing
             <span className="card-toggle-yearly-discount">25% discount</span>
+            <span className="card-toggle-yearly-discount-mobile">-25%</span>
           </p>
         </div>
 

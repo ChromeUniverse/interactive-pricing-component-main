@@ -87,11 +87,13 @@ body {
   box-shadow: 0px 5px 20px 0px var(--light-grayish-blue-2);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
   position: relative;
 }
 
 .card-top {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -107,7 +109,12 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 5px;
+}
+
+.card-top-pricing-mobile {
+  display: none;
 }
 
 .card-top-pricing-price {
@@ -186,18 +193,22 @@ input[type=range]::-webkit-slider-thumb {
   position: relative;
 }
 
-.card-toggle-yearly-discount {
-  content: 'lmao';
+.card-toggle-yearly-discount, .card-toggle-yearly-discount-mobile {
   position: absolute;
   top: 2px;
   left: calc(100% + 10px);
-  /* right: 0; */
   font-size: 11px;
   text-align: center;
   width: 80px;
   border-radius: 1000px;
   background-color: var(--light-grayish-red);
   color: var(--light-red);
+}
+
+.card-toggle-yearly-discount-mobile {
+  display: none;
+  width: 40px;
+  left: calc(100% + 5px);
 }
 
 /* The switch - the box around the slider */
@@ -261,10 +272,10 @@ input:checked + .toggle-slider::before {
   background-color: var(--light-grayish-blue-1);
   height: 2px;  
   width: 540px;
-  margin-left: -40px;
 }
 
 .card-footer {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -301,8 +312,58 @@ input:checked + .toggle-slider::before {
 
 @media (max-width: 650px) {
 
+  body {
+    background-image: none;
+  }
+
+  .header-title, .header-subtitle {
+    text-align: center;
+    width: 90vw;
+  }
+
   .card {
-    width: 80%;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .card-toggle-yearly-discount {
+    display: none;
+  }
+
+  .card-toggle-yearly-discount-mobile {
+    display: block;
+  }
+
+  .card-top {
+    justify-content: center;
+  }
+
+  .card-top-pricing {
+    display: none;
+  }
+
+  .card-top-pricing-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .card-divider {
+    display: block;
+    width: 90vw;
+    margin-left: 0;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .card-footer-list {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
   }
   
 }
