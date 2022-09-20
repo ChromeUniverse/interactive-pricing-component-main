@@ -38,11 +38,9 @@
 
 body {
   background-color: var(--very-pale-blue);
-  /* background-color: pink; */
   background-image: url('/images/bg-pattern.svg');
   background-repeat: no-repeat;
-  background-size: 100%;
-  /* background-position: 0 0vh; */
+  background-size: 100% 60vh;
   height: auto;
   min-height: 100vh;
   display: flex;
@@ -171,10 +169,17 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .card-slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  height: 40px;
+  width: 40px;
+  border-radius: 23px;
+  background: url('../public/images/icon-slider.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: var(--strong-cyan);
+  cursor: pointer;
+  margin-top: -15px;
+  border: none;
+  box-shadow: 0 15px 20px var(--soft-cyan);
 }
 
 .card-toggle {
@@ -312,10 +317,6 @@ input:checked + .toggle-slider::before {
 
 @media (max-width: 650px) {
 
-  body {
-    background-image: none;
-  }
-
   .header-title, .header-subtitle {
     text-align: center;
     width: 90vw;
@@ -363,7 +364,6 @@ input:checked + .toggle-slider::before {
   .card-footer-list {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
   }
   
 }
