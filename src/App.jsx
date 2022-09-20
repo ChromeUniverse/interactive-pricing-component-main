@@ -9,7 +9,7 @@ import React, { useState } from 'react'
 
 function App() {
 
-  const [slider, setSlider] = useState(0);
+  const [slider, setSlider] = useState(Math.floor(Math.random() * 5));
   const [discount, setDiscount] = useState(false);
 
   const pageviews = ['10k', '50k', '100k', '500k', '1M'];
